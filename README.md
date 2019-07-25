@@ -1,11 +1,12 @@
-# London Bioinformatics Frontiers Hackathon Tutorial
-Tutorial for The [London Bioinformatics Frontiers](http://bioinformatics-frontiers.com) Hackathon 2019.
+# Jackson Labs Tutorial
+Tutorial for Jackson Labs, on 26th July 2019, covering Nextflow, containers, FlowCraft and Deploit.
 
-![lbf_banner](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/lbf_banner.png)
+
+![jax_logo](https://www.jax.org/_res/img/logo-tag.png)
 
 In this tutorial you will learn:
 - [Nextflow](https://www.nextflow.io/) - how to build parallelisable & scalable computational pipelines
-- [Docker](https://www.docker.com/) - how to build & run containers to bundle dependencies
+- Containers such as [Docker](https://www.docker.com/) & [Singularity](https://sylabs.io/singularity/) - how to build & run containers to bundle dependencies
 - [FlowCraft](https://flowcraft.readthedocs.io/en/latest/) - how to build & use modular, extensible and flexible components for Nextflow pipelines
 - [Deploit](https://lifebit.ai/deploit) - how to scale your analyses over the cloud
 
@@ -55,7 +56,9 @@ git clone https://github.com/lifebit-ai/lbf-hack-tutorial.git
 && cd lbf-hack-tutorial
 ```
 
-For the tutorial we will be working through a series of steps. If you are behind you can view the branches we have made for that section. The final branch is 2b. 
+For the tutorial we will be working through a series of steps. If you are behind you can view the branches we have made for that section. The final branch is 2b.
+
+If you’re familiar with git this should help you falling behind with the pipeline. The key thing then is not to fall behind with installing the software dependencies etc.
 
 ![branches](https://raw.githubusercontent.com/lifebit-ai/lbf-hack-tutorial/master/images/branches.png)
 
@@ -258,7 +261,7 @@ process multiqc {
     container 'ewels/multiqc:v1.7'
 
     input:
-    file (fastqc:'fastqc/*') from fastqc_results.collect()
+    file ('fastqc/*') from fastqc_results.collect()
 
     output:
     file "*multiqc_report.html" into multiqc_report
@@ -518,7 +521,7 @@ class Fastqc2(Process):
         super().__init__(**kwargs)
 
         self.input_type = "fastq"
-        self.output_type = "fastq"
+        self.output_type = "html"
 
         self.directives = {"fastqc2": {
             "cpus": 2,
@@ -545,12 +548,13 @@ Now if we add the directory containing `flowcraft.py` to our path, we can then b
 export PATH=$PATH:/path/to/flowcraft/flowcraft
 ```
 
-Now we can test the component we have built with the command:
+Now we can test the component we have built with the commands:
 ```bash
+mkdir fc_test && cd fc_test
 flowcraft.py build -t "fastqc2" -o fastqc.nf
 ```
 
-This will create a Nextflow script `fastqc.nf`    
+This will create a Nextflow script `fastqc.nf`. **Be careful which directory you run this command it will populate the folder with lots of files.**
 
 More complex pipelines such as a GATK pipeline can be built with one command:
 ```bash
@@ -570,7 +574,7 @@ Here the `merge-params` flag is used to merges all parameters with the same name
 [Deploit](https://lifebit.ai/deploit) is a bioinformatics platform, developed by Lifebit, where you can run your analysis over the Cloud/AWS.
 
 ### a) Creating an account
-First, create an account/log in [here](https://deploit.lifebit.ai/register). You will get $10 free credits. If you prefer you can connect & use your own AWS account/credentials.
+First, create an account/log in [here](https://deploit.lifebit.ai/register). For the purposes of this worksop you can setup a Deploit account with $10 free credit. After this workshop you may choose to connect your cloud account to access your own data & compute
 
 ![create_deploit_account](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/create_deploit_account.png)
 
@@ -653,17 +657,18 @@ You can view a successfully completed example job [here](https://staging.lifebit
 
 ### Thanks for taking part
 
-Well done you survived! You’ve made it to the end of the hackathon tutorial. You’ve learned about the magic of Nextflow, Docker, Flowcraft & Deploit. You can now go out & analyse all the things.
+Well done you survived! You’ve made it to the end of the workshop tutorial. You’ve learned about the magic of Nextflow, containers, Flowcraft & Deploit. You can now go out & analyse all the things.
 
 ![all_the_things](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/all_the_things.jpg)
 
 Hope you enjoyed the conference & let us know if you have any [feedback](https://forms.gle/u78r5byJeZENbKdF8) or questions.
 
-Is there anything we could have improved on? It would be much appreciated if you could fill out this [feedback form](https://forms.gle/u78r5byJeZENbKdF8). For any questions, email me phil@lifebit.ai
+Is there anything we could have improved on? It would be much appreciated if you could fill out this [feedback form](https://forms.gle/u78r5byJeZENbKdF8). For any questions please email phil@lifebit.ai
 
 ## Credits
 
-Credit to [Lifebit](https://lifebit.ai/) & [The Francis Crick Institute](https://www.crick.ac.uk/) for organising & hosting the event
+Credits to [Jackson Labs](https://www.jax.org/) & [Anne Deslattes Mays](https://github.com/adeslatt) for hosting us & organising the event.
+Credits to Lifebit for preparing & presenting the workshop.
 
 Many thanks to everyone who helped out along the way, including (but not limited to): 
 @ODiogoSilva, @cgpu, @clairealix, @cimendes & @pprieto
