@@ -322,7 +322,7 @@ Here we learnt how to use configuration files to set parameters, resources & con
 
 ![docker logo](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/docker.gif)
 
-What is Docker? Why use it? [See about Docker slides]()
+What is Docker? Why use it? [Read more about Docker here](https://docs.docker.com/get-started/)
 
 **Main outcome:** *During this session, you will learn how to build & run your own Docker container to bundle dependencies for FastQC & MultiQC*
 
@@ -465,7 +465,7 @@ docker pull nextflow/rnaseq-nf@sha256:aeacbd7ea1154f263cda972a96920fb228b2033544
 ![flowcraft logo](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/flowcraft.png)
 
 What is FlowCraft? Why use it? 
-[See FlowCraft slides](https://slides.com/diogosilva-1/nextflow-workshop-2018-6#/)
+[See FlowCraft slides](https://slides.com/diogosilva-1/deck-7/#/10)
 
 **Main outcome:** *During this session, you will learn how to build your own Fastqc FlowCraft component & GATK pipeline*
 
