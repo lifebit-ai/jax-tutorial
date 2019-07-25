@@ -78,7 +78,7 @@ git checkout 1b
 
 ![nextflow_logo](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/nextflow.png)
 
-What is Nextflow? Why use it? [See about Nextflow slides]()
+What is Nextflow? Why use it? [See about Nextflow slides](https://deploit-tutorial.s3-eu-west-1.amazonaws.com/lifebit_bioinformatics_frontiers_london_crick.pdf)
 
 **Main outcome:** *During the first session you will build a [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) & [MultiQC](https://multiqc.info/) pipeline to learn the basics of Nextflow including:*
 - [Parameters](https://www.nextflow.io/docs/latest/getstarted.html?highlight=parameters#pipeline-parameters)
