@@ -14,7 +14,7 @@ In this tutorial you will learn:
 
 The following is a very rough agenda for the day. The coffee & lunch breaks will definitely be at the times stated here. However, we may find that different parts of the tutorial take us more or less time to get through the content than the times stated here:
 
-![agenda](https://raw.githubusercontent.com/lifebit-ai/lbf-hack-tutorial/master/images/agenda.png)
+![agenda](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/jax-agenda.png)
 
 ## Prerequisites
 The following are required for the hackathon:
