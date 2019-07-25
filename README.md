@@ -52,13 +52,13 @@ The following are required for the hackathon:
 ## Setup
 So that you have the `testdata` within the repository it is recommended that you clone this reposiotry. To do this open a terminal & enter the following:
 ```
-git clone https://github.com/lifebit-ai/lbf-hack-tutorial.git
-&& cd lbf-hack-tutorial
+git clone https://github.com/lifebit-ai/jax-tutorial.git
+&& cd jax-tutorial
 ```
 
 For the tutorial we will be working through a series of steps. If you are behind you can view the branches we have made for that section. The final branch is 2b.
 
-If you’re familiar with git this should help you falling behind with the pipeline. The key thing then is not to fall behind with installing the software dependencies etc.
+If you’re familiar with git this should help you falling behind with the pipeline. The key thing then is not to fall behind with installing the software dependencies :sweat_smile:
 
 ![branches](https://raw.githubusercontent.com/lifebit-ai/lbf-hack-tutorial/master/images/branches.png)
 
@@ -668,7 +668,8 @@ Is there anything we could have improved on? It would be much appreciated if you
 ## Credits
 
 Credits to [Jackson Labs](https://www.jax.org/) & [Anne Deslattes Mays](https://github.com/adeslatt) for hosting us & organising the event.
-Credits to Lifebit for preparing & presenting the workshop.
+
+Credits to [Lifebit](https://lifebit.ai/) for preparing & presenting the workshop.
 
 Many thanks to everyone who helped out along the way, including (but not limited to): 
 @ODiogoSilva, @cgpu, @clairealix, @cimendes & @pprieto
