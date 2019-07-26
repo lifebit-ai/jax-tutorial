@@ -12,7 +12,7 @@ In this tutorial you will learn:
 
 ## Agenda
 
-The following is a very rough agenda for the day. The coffee & lunch breaks will definitely be at the times stated here. However, we may find that different parts of the tutorial take us more or less time to get through the content than the times stated here:
+The following is a very rough agenda for the day. We may find that different parts of the tutorial take us more or less time to get through the content than the times stated here:
 
 ![agenda](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/jax-agenda.png)
 
@@ -34,6 +34,7 @@ The following are required for the hackathon:
     - [d) Channels](#d-channels)
     - [e) Operators](#e-operators)
     - [f) Configuration](f-configuration)
+    - [g) BONUS: Running with Singularity](#g-bonus-running-with-singularity)
 - [Session 2: Docker](#session-2-docker)
     - [a) Running images](#a-running-images)
     - [b) Dockerfiles](#b-dockerfiles)
@@ -315,6 +316,25 @@ nextflow run main.nf --reads "testdata/test.20k_reads_{1,2}.fastq.gz"
 
 #### Recap
 Here we learnt how to use configuration files to set parameters, resources & containers
+
+### g) BONUS: Running with Singularity
+
+Singularity is an alternative container engine to Docker. You may consider using it because it can be run with unprivileged permissions, as it's more suited for HPCs or because your organisation forces you to...
+
+To run the Nextflow pipeline with Singularity instead of Docker you simply need to change one line in the configuration file eg [`nextflow.config`](https://www.nextflow.io/docs/latest/config.html#configuration-file). This works because Nextflow is able to pull images from any Docker register, for example DockerHub in this case.
+
+Rather than using `docker.enabled = true` your `nextflow.config` file should contain:
+```
+singularity.enabled = true
+```
+
+If you have [Singularity](https://sylabs.io/singularity/) installed you can the pipeline with the same command as before:
+```bash
+nextflow run main.nf --reads "testdata/test.20k_reads_{1,2}.fastq.gz"
+```
+
+#### Recap
+Here we learnt how to run our [Nextflow pipeline with Singularity]((https://www.nextflow.io/docs/latest/singularity.html)) instead of Docker.
 
 <br />
 
