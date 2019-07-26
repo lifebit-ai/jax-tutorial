@@ -1,12 +1,9 @@
-params.reads = false
-
 reads = Channel.fromFilePairs(params.reads, size: 2)
 
 process fastqc {
 
     tag "$name"
     publishDir "results", mode: 'copy'
-    container 'flowcraft/fastqc:0.11.7-1'
 
     input:
     set val(name), file(reads) from reads
@@ -23,7 +20,6 @@ process fastqc {
 process multiqc {
 
     publishDir "results", mode: 'copy'
-    container 'ewels/multiqc:v1.7'
 
     input:
     file ('fastqc/*') from fastqc_results.collect()
