@@ -485,7 +485,7 @@ docker pull nextflow/rnaseq-nf@sha256:aeacbd7ea1154f263cda972a96920fb228b2033544
 ![flowcraft logo](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/flowcraft.png)
 
 What is FlowCraft? Why use it? 
-[See FlowCraft slides](https://slides.com/diogosilva-1/deck-7/#/10)
+[See FlowCraft slides](https://slides.com/diogosilva-1/deck-7/#/)
 
 **Main outcome:** *During this session, you will learn how to build your own Fastqc FlowCraft component & GATK pipeline*
 
@@ -645,7 +645,7 @@ To select the data & parameters you must:
 - Once the testdata has been imported you must specify the values for each parameter:
     - `fastq` use the blue plus button to `Choose` the imported folder & click `+Regex` & type `*{1,2}.fastq.gz`
     - `reference` you can also use strings to specify the location. Set the reference to `s3://ngi-igenomes/igenomes/Homo_sapiens/GATK/GRCh37/Sequence/WholeGenomeFasta/human_g1k_v37_decoy`
-    - For the intervals click the blue plus again & select the `GRCh37WholeGenome.interval_list` file within the imported folder
+    - `intervals` click the blue plus again & select the `GRCh37WholeGenome.interval_list` file within the imported folder
 - Finally, click `Next`
 
 See below for all of the steps:
