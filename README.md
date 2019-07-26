@@ -506,6 +506,12 @@ source philisawesome/bin/activate
 python3 setup.py install
 ```
 
+Now if we add the directory containing `flowcraft.py` to our path, we can then build a pipeline from any directory, eg:
+```bash
+cd flowcraft
+export PATH=$PATH:$PWD
+```
+
 ### b) How to build a FlowCraft Component
 FlowCraft allows you to build pipelines from components. In order to create a new Component, two files are required. These are the template & the class.
 
@@ -570,11 +576,6 @@ Here we set the following:
 - the **status channels** for the process to log its status
 
 ### c) Building a pipeline with FlowCraft
-
-Now if we add the directory containing `flowcraft.py` to our path, we can then build a pipeline from any directory, eg:
-```bash
-export PATH=$PATH:/path/to/flowcraft/flowcraft
-```
 
 Now we can test the component we have built with the commands:
 ```bash
