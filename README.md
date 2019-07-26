@@ -422,14 +422,14 @@ docker images
 #### For example:
 With the `Dockerfile` from above you might want to run:
 ```bash
-docker build -t lifebitai/lbf-hack .
+docker build -t lifebitai/jax-workshop .
 ```
 
 ![conda](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/conda.png)
 
 And then you can enter inside the container to check everything is working:
 ```bash
-docker run -it lifebitai/lbf-hack:latest bash
+docker run -it lifebitai/jax-workshop:latest bash
 ```
 
 The container can be used in our Nextflow pipeline replacing the two different containers we currently have because it has both `fastqc` & `multiqc` installed
