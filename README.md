@@ -499,6 +499,10 @@ FlowCraft is available to install via both Conda & Pip. However, as we are going
 ```bash
 git clone https://github.com/assemblerflow/flowcraft.git
 cd flowcraft
+
+virtualenv philisawesome
+source philisawesome/bin/activate
+
 python3 setup.py install
 ```
 
