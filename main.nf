@@ -19,3 +19,21 @@ process fastqc {
     fastqc $reads
     """
 }
+
+process multiqc {
+
+    publishDir "results", mode: 'copy'
+    container 'ewels/multiqc:v1.7'
+
+    input:
+    file ('fastqc/*') from fastqc_results.collect()
+
+    output:
+    file "*multiqc_report.html" into multiqc_report
+    file "*_data"
+
+    script:
+    """
+    multiqc . -m fastqc
+    """
+}
