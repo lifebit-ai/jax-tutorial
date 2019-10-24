@@ -126,6 +126,18 @@ docker -v
 If you need to install docker you can do so by following the instructions [here](https://docs.docker.com/v17.12/install/). Be sure to select your correct OS:
 [![install_docker](https://raw.githubusercontent.com/PhilPalmer/lbf-hack-tutorial/master/images/install_docker.png)](https://docs.docker.com/v17.12/install/)
 
+### iii. Bonus: Installing singularity
+
+To install singularity you can follow the instructions on their website for:
+- [Linux](http://singularity.lbl.gov/install-linux)
+- [MacOS](http://singularity.lbl.gov/install-mac)
+
+Alternatively, if you have [Conda](https://docs.conda.io/en/latest/) installed you can run the following command:
+```bash
+conda install -c bioconda singularity
+```
+
+
   
 ### b) Parameters
 
